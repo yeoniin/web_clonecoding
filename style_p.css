@@ -1,0 +1,227 @@
+:root{
+  /*초반에 공통적으로 사용할 수 있는 부분들은 미리 만들어 놓자*/
+  /*Colors*/
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --gray-dark-color: #909090;
+  --gray-light-color: #e0e0e0;
+
+  /*Size*/
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  /*Font-size*/
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+
+button,
+button:focus{
+  background-color: var(--white-color);
+  border: none;
+  cursor: pointer; /*버튼에 가져다 놓았을 때 포인터 모양*/
+  outline: none; /*커서 가져다 놓아도 outline 없음*/
+}
+
+body{
+  font-family: Roboto; /*font-family 글꼴을 설정하는 속성*/
+}
+
+/*header*/
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+header .logo{
+  font-size: var(--font-large);
+}
+
+header .logo i{
+  color: var(--red-color);
+}
+
+header .icon .fa-search{
+  margin-right: var(--padding);
+}
+
+/*video*/
+.player{
+  position: sticky;
+  top: 0;
+  text-align: center; /*align-content 사용 x*/
+  background-color: var(--black-color);
+}
+
+.player video{
+  width: 100%;
+  height: 100%;
+  max-width: 800px; /*800px 이내 일때 100%가 되라는 것*/
+}
+
+body >.info{
+  padding: var(--padding);
+}
+
+.info .metadata .hashtags{
+  display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
+}
+
+.info .metadata .hashtags li{
+  margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton {
+  display: flex;
+}
+
+.info .metadata .titleAndButton .title{
+  font-size: var(--font-medium);
+  /* title이 두줄 이상 넘어가면 안돼*/
+  /*css line clamp 라고 검색*/
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .moreBtn{
+  heigth: 100%;
+}
+
+.info .views{
+  font-size: var(--font-small);
+  color: var(--gray-dark-color);
+}
+
+.info .actions{
+  display: flex;
+  justify-content: space-around;
+  margin: var(--padding);
+}
+.info .actions button{
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+  color: var(--gray-dark-color);
+}
+.info .actions button i{
+  margin: 0 auto; /* 가운데로 옴. 좌우를 auto로*/
+  margin-bottom: calc(var(--padding)/2);
+  font-size: 16px;
+}
+
+.info .actions button i.active{
+  color: var(--blue-color);
+}
+
+/* channel*/
+.channel{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--gray-light-color);
+  border-bottom: 1px solid var(--gray-light-color);
+}
+.channel .metadata{
+  display: flex;
+  align-items: center;
+}
+.channel .metadata .info{
+  display: flex;
+  flex-direction: column;
+}
+.channel .metadata .info .name{
+  font-size: var(--font-medium);
+}
+.channel .metadata .info .subscribers{
+  font-size: var(--font-small);
+  color: var(--gray-dark-color);
+}
+.channel .metadata img{
+  margin-right: var(--padding);
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+.channel .subscribe{
+  text-transform: uppercase; /*대문자로*/
+  color: var(--red-color);
+  font-size: var(--font-medium);
+}
+
+/*Up next*/
+.upnext{
+  padding: var(--padding);
+}
+
+.upnext >.title{
+  font-size: var(--font-medium);
+  color: var(--gray-dark-color);
+  margin-bottom: calc(var(--padding)/2);
+}
+
+.upnext .item{
+  display: flex;
+  margin-top: var(--padding);
+}
+.upnext .item img{
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+.upnext .item .img img{
+  width: 100%;
+}
+.upnext .item .info{
+  flex: 1 1 60%;
+}
+.upnext .item .info{
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--padding);
+}
+.upnext .item .moreBtn{
+  flex: 1 1 5%;
+  height: 100%;
+  margin-left: var(--padding);
+}
+.upnext .item .info .title{
+  font-size: var(--font-small);
+}
+.upnext .item .info .name{
+  font-size: var(--font-micro);
+}
+.upnext .item .info .views{
+  font-size: var(--font-micro);
+}
+
+.infoandupnext{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .infoandupnext{
+    flex-direction: row;
+    margin: var(--padding);
+  }
+}

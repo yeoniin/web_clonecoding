@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>YoutubeMobile</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> <!--CDN 링크 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_p.css">
+
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <i class="fab fa-youtube"></i>
+        <span class="title">Youtube</span>
+      </div>
+      <div class="icon">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-ellipsis-v"></i>
+      </div>
+    </header>
+
+    <!--Video Player-->
+    <section class="player">
+      <video controls src="video/travle.mp4"></video>
+    </section>
+
+    <!--Video Info & UpNext-->
+    <div class="infoandupnext">
+      <!--Video Info-->
+      <section class="info">
+        <div class="metadata">
+          <ul class="hashtags">
+            <li>#유럽여행</li>
+            <li>#스페인</li>
+            <li>#바르셀로나</li>
+          </ul>
+          <div class="titleAndButton">
+            <span class="title">
+              유럽여행 1탄 스페인 바르셀로나 편!! 바르셀로나에서 뛰어노는 아이들과 비눗방울 아저씨.. 비눗방울이 생기면 잡으려는 아이들과
+              날씨가 너무 환상적인 영상!! 이 곳은 바르셀로나의 어느 공원일까?
+            </span>
+            <button class="moreBtn">
+              <i class="fas fa-caret-down"></i>
+            </button>
+          </div>
+          <span class="views">1M views 1 month ago</span>
+        </div>
+
+        <!-- Actions Description-->
+        <ul class="actions">
+          <li><button><i class="active fas fa-thumbs-up"></i><span>1K</span></button></li>
+          <li><button><i class="fas fa-thumbs-down"></i><span>0</span></button></li>
+          <li><button><i class="fas fa-share"></i><span>Share</span></button></li>
+          <li><button><i class="fas fa-plus"></i><span>Save</span></button></li>
+          <li><button><i class="fab fa-font-awesome-flag"></i><span>Report</span></button></li>
+        </ul>
+
+        <!--Channel -->
+        <div class="channel">
+          <div class="metadata">
+            <img src="image/yeonjin.jpg" alt="">
+            <div class="info">
+              <span class="name">연진의 vlog</span>
+              <span class="subscribers">1M subscribers</span>
+            </div>
+          </div>
+          <button class="subscribe">subscribe</button>
+        </div>
+      </section>
+
+      <!--Up next Description-->
+      <section class="upnext">
+        <span class="title">Up next</span>
+        <ul>
+          <li class="item">
+            <div class="img"><img src="image/1.jpg" alt=""></div>
+            <div class="info">
+              <span class="title">유럽여행 2탄 스위스 인터라켄 편!! 긴 팔 옷 한장만 가지고 가서 만년설이 내린 스위스에서 지낼 수 있다고? </span>
+              <span class="name">연진의 vlog</span>
+              <span class="views">82K views</span>
+            </div>
+            <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+          </li>
+          <li class="item">
+            <div class="img">
+              <img src="image/2.jpg" alt="">
+            </div>
+            <div class="info">
+              <span class="title">유럽여행 3탄 포르투갈 포르투 편!! 이번 유럽여행의 인생 여행지를 꼽자면 난 묻지도 따지지도 않고 포르투를 선택할 것! </span>
+              <span class="name">연진의 vlog</span>
+              <span class="views">60K views</span>
+            </div>
+            <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+          </li>
+          <li class="item">
+            <div class="img">
+              <img src="image/3.jpg" alt="">
+            </div>
+            <div class="info">
+              <span class="title">이케아가서 남자친구 자취방 꾸며주기 대작전! 이케아 첫 방문!! 이케아 쇼핑 꿀팁!</span>
+              <span class="name">연진의 vlog</span>
+              <span class="views">70K views</span>
+            </div>
+            <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+  </body>
+</html>
